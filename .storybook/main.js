@@ -9,6 +9,7 @@ const config = {
     "@chromatic-com/storybook",
     '@storybook/addon-a11y',
     '@storybook/testing-library',
+    ' @storybook/addon-jest',
 
 
     "@storybook/addon-interactions",

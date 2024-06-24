@@ -1,0 +1,34 @@
+stages:
+  - install
+  - test
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+install_dependencies:
+  stage: install
+  script:
+    - npm ci
+
+run_tests:
+  stage: test
+  script:
+    - npm run test
+  artifacts:
+    when: always
+    paths:
+      - test-results.xml
+    reports:
+      junit: test-results.xml
+
+# Optional: Define a default image to use
+image: node:16
+
+# Optional: Define services, if you have a database or other dependencies
+# services:
+#   - postgres:latest
+#   - redis:latest

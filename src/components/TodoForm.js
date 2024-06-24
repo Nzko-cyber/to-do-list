@@ -16,8 +16,8 @@ class TodoForm extends React.Component {
   render() {
     return (
       <form id="todoList-form" onSubmit={this.addItemOnList}>
-        <input type="text" name="todosTxtbx" ref={this.todoRef} required />
-        <button>Add +</button>
+        <input type="text" name="todosTxtbx" ref={this.todoRef} required placeholder="Text"/>
+        <button>Add</button>
       </form>
     );
   }

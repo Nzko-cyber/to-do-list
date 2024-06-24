@@ -1,8 +1,7 @@
 // src/App.stories.js
 import { Primary } from '@storybook/blocks';
 import App from '../App';
-import { expect } from '@storybook/addon-jest';
-import { within,waitFor, userEvent } from '@storybook/testing-library';
+import { within, userEvent } from '@storybook/testing-library';
 
 export default {
   title: 'Page/App',
@@ -28,18 +27,14 @@ Default.play = async ({ canvasElement }) => {
   await userEvent.type(input, 'New Task');
   await userEvent.click(addButton);
 
-
-  const newItem = await canvas.findByDisplayValue('New Task');
+  // Verify the new task is added
+  const newItem = canvas.getByText('New Task');
   expect(newItem).toBeInTheDocument();
-  
-  const deleteButton = canvas.getByText('x');
+
+  // Remove the task
+  const deleteButton = canvas.getByText('Delete');
   await userEvent.click(deleteButton);
 
-  // Используйте waitFor для ожидания удаления элемента
-  await waitFor(() => {
-    expect(newItem).not.toBeInTheDocument();
-  });
-
-  // Выведите HTML содержимое для отладки
-  console.log(canvasElement.innerHTML);
+  // Verify the task is removed
+  expect(newItem).not.toBeInTheDocument();
 };

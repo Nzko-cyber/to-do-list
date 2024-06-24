@@ -20,7 +20,7 @@ class TodoList extends React.Component {
 
   render() {
     return (
-      <li title="li" className={this.props.todoItems.isCompleted ? "done" : null}>
+      <li className={this.props.todoItems.isCompleted ? "done" : null}>
         <input
           type="checkbox"
           name="isCompleted"

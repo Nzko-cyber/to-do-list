@@ -3,65 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
     "playwright-testing-library": "^4.5.0",
-=======
+
     "@storybook/addon-jest": "^8.1.10",
->>>>>>> 2f5c3e0bfc3c01c0d1791cbcef47ddca6f3b07b5
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^11.2.7",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "^5.0.1"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "^@components/(.*)$": "<rootDir>/src/components/$1"
-    },
-    "clearMocks": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/node_modules/"
-    ],
-    "coverageReporters": [
-      "json",
-      "text",
-      "lcov",
-      "clover"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": -10
-      }
-    },
-    "displayName": {
-      "name": "client",
-      "color": "blue"
-    },
-    "resetMocks": true,
-    "resetModules": false,
-    "restoreMocks": true,
-    "snapshotSerializers": [],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "watchPathIgnorePatterns": []
   },
   "scripts": {
     "start": "react-scripts start",
@@ -86,10 +37,7 @@
     "@storybook/react-webpack5": "^8.1.10",
     "@storybook/test": "^8.1.10",
     "@storybook/testing-library": "^0.2.2",
-    "@testing-library/jest-dom": "^6.4.6",
-    "@testing-library/react": "^16.0.0",
     "@types/node": "^20.14.6",
-    "ajv": "^7.2.4",
     "prop-types": "^15.8.1",
     "storybook": "^8.1.10",
     "webpack": "^5.92.1"

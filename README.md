@@ -66,27 +66,7 @@ A simple to-do list application built with Node.js.
     ```sh
     npm start
     ```
-    Open your browser and navigate to `http://localhost:3000` to see the to-do list application.
-
-2. Start the storybook:
-    ```sh
-    npm run storybook
-    ```
-    Open your browser and navigate to `http://localhost:6000` to see the storybook-ui.
-
-3. Run tests:
-    ```sh
-    npm tests
-    ```
-
-4. Create a component with Hygen in the application:
-    ```sh
-    hygen new component
-    ```
-
-
-
-
+2. Open your browser and navigate to `http://localhost:3000` to see the to-do list application.
 
 ## Features
 
@@ -94,26 +74,3 @@ A simple to-do list application built with Node.js.
 - Mark tasks as complete
 - Delete tasks
 - Filter tasks by status (all, active, completed)
-
-## Dependencies
-
-react: "^16.4.2"
-react-dom: "^16.4.2"
-react-scripts: "^5.0.1"
-@storybook/addon-jest: "^8.1.10"
-@storybook/addon-essentials: "^8.1.10"
-@storybook/addon-interactions: "^8.1.10"
-@storybook/addon-links: "^8.1.10"
-@storybook/addon-onboarding: "^8.1.10"
-@storybook/blocks: "^8.1.10"
-@storybook/preset-create-react-app: "^8.1.10"
-@storybook/react: "^8.1.10"
-@storybook/react-webpack5: "^8.1.10"
-@storybook/testing-library: "^0.2.2"
-@testing-library/jest-dom: "^6.4.6"
-@testing-library/react: "^16.0.0"
-prop-types: "^15.8.1"
-webpack: "^5.92.1"
-@chromatic-com/storybook: "^1.5.0"
-@fortawesome/fontawesome-free: "^5.2.0"
-@playwright/test: "^1.44.1"

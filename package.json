@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
+    "playwright-testing-library": "^4.5.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "^5.0.1"

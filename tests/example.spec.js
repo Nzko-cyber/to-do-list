@@ -9,7 +9,7 @@ test.describe('Follow the link', () => {
             description: 'https://app.clickup.com/9005081859/v/dc/8cbx983-6307/8cbx983-33038'
         }
     }, async ({ page }) => {
-        await page.goto('http://localhost:3000/');
+        await page.goto('httpg://localhost:3000/');
         await expect(page).toHaveURL('http://localhost:3000/');
     });
 });

@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/App.css'
 
 class TodoForm extends React.Component {
   todoRef = React.createRef();

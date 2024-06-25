@@ -1,18 +1,51 @@
 // src/App.stories.js
-import { Primary } from '@storybook/blocks';
+import { Docs } from '@storybook/blocks';
 import App from '../App';
-import { within, userEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/test';
+import { within,waitFor, userEvent } from '@storybook/testing-library';
 
 export default {
   title: 'Page/App',
   component: App,
+  tags: ["autodocs"],
 };
 
 export const Default = 
 {
 args: {
+    parameters: {
+        a11y: {
+          // Optional selector to inspect
+          element: '#storybook-root',
+          config: {
+            rules: [
+              {
+                // The autocomplete rule will not run based on the CSS selector provided
+                id: 'autocomplete-valid',
+                selector: '*:not([autocomplete="nope"])',
+              },
+              {
+                // Setting the enabled option to false will disable checks for this particular rule on all stories.
+                id: 'image-alt',
+                enabled: false,
+              },
+            ],
+          },
+          // Axe's options parameter
+          options: {},
+          // Optional flag to prevent the automatic check
+          manual: true,
+        },
+      },
+      
+      
   
-},}
+},
+
+
+}
+
+
 
 
 
@@ -21,20 +54,26 @@ Default.play = async ({ canvasElement }) => {
 
   // Find the input and button elements
   const input = canvas.getByRole('textbox');
-  const addButton = canvas.getByText('Add +');
+
+
+  const addButton = canvas.getByText('Add');
 
   // Add a new task
   await userEvent.type(input, 'New Task');
   await userEvent.click(addButton);
 
   // Verify the new task is added
-  const newItem = canvas.getByText('New Task');
+  const newItem = await canvas.findByDisplayValue('New Task');
   expect(newItem).toBeInTheDocument();
-
-  // Remove the task
-  const deleteButton = canvas.getByText('Delete');
+ 
+  const deleteButton = canvas.getByText('x');
   await userEvent.click(deleteButton);
 
-  // Verify the task is removed
-  expect(newItem).not.toBeInTheDocument();
+  // Используйте waitFor для ожидания удаления элемента
+  await waitFor(() => {
+    expect(newItem).not.toBeInTheDocument();
+  });
+
+  // Выведите HTML содержимое для отладки
+  console.log(canvasElement.innerHTML);
 };

@@ -25,6 +25,7 @@
     "@chromatic-com/storybook": "^1.5.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
     "@playwright/test": "^1.44.1",
+    "@storybook/addon-designs": "^8.0.2",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",

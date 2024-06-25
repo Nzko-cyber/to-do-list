@@ -35,6 +35,10 @@ export const Default = {
         // Optional flag to prevent the automatic check
         manual: true,
       },
+      design: {
+        type: 'figma/home page',
+        url: 'https://www.figma.com/design/XVWwaVi0D8vZ4DZqPwzOmI/Storybook?node-id=151-97&t=LcXkeyJhgRxhU5ah-4',
+      },
     },
   },
 };

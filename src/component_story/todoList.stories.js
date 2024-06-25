@@ -14,4 +14,10 @@ export const Default = {
       console.log("Updated Todo:", index, updatedTodo),
     removeToDoItem: (index) => console.log("Removed Todo:", index),
   },
+  parameters: {
+    design: {
+      type: 'figma/to-do list',
+      url: 'https://www.figma.com/design/XVWwaVi0D8vZ4DZqPwzOmI/Storybook?node-id=152-175&t=LcXkeyJhgRxhU5ah-4',
+    },
+  },
 };

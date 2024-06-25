@@ -10,6 +10,7 @@ const config = {
     '@storybook/addon-a11y',
     '@storybook/testing-library',
     "@storybook/addon-interactions",
+    '@storybook/addon-designs'
   ],
   framework: {
     name: "@storybook/react-webpack5",

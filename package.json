@@ -3,14 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^11.2.7",
-    "playwright-testing-library": "^4.5.0",
-
     "@storybook/addon-jest": "^8.1.10",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^11.2.7",
-    "react": "^16.4.2",
+    "playwright-testing-library": "^4.5.0",
+    "react": "^16.14.0",
     "react-dom": "^16.4.2",
     "react-scripts": "^5.0.1"
   },

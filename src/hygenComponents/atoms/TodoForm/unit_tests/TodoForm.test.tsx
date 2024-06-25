@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Atom } from '../';
+import  TodoForm  from '../../../../components/TodoForm';
 
 test('renders component successfully', () => {
-  render(<Atom  />);
+  render(<TodoForm  />);
   const element = screen.getByTestId(/test/i);
   expect(element).toBeInTheDocument();
 });

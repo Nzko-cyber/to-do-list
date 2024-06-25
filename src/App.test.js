@@ -1,26 +1,39 @@
-// src/App.test.js
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
-import App from './App';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
-test('renders App component and adds a new to-do item', () => {
-  render(<App />);
-  
-  // Add a new to-do item
-  const input = screen.getByPlaceholderText('Enter a new task');
-  const addButton = screen.getByText('Add Task');
-  fireEvent.change(input, { target: { value: 'New Task' } });
-  fireEvent.click(addButton);
-  
-  // Check if the new to-do item is added
-  const newItem = screen.getByText('New Task');
-  expect(newItem).toBeInTheDocument();
-  
-  // Delete the to-do item
-  const deleteButton = screen.getByText('Delete');
-  fireEvent.click(deleteButton);
-  
-  // Check if the to-do item is deleted
-  expect(newItem).not.toBeInTheDocument();
+test('Render to do', () => {
+  render(<TodoForm addToDoItems={() => { }} />);
+  const input = screen.getByPlaceholderText(/text/i);
+  expect(input).toBeInTheDocument();
+});
+
+test('Updates input value on change', () => {
+  render(<TodoForm addToDoItems={() => { }} />);
+  const input = screen.getByPlaceholderText(/text/i);
+  fireEvent.change(input, { target: { value: 'test' } });
+  expect(input.value).toBe('test');
+});
+
+test('Calls addToDoItems on form submission', () => {
+  const mockAddToDoItems = jest.fn();
+  render(<TodoForm addToDoItems={mockAddToDoItems} />);
+  const input = screen.getByPlaceholderText(/text/i);
+  const submitButton = screen.getByText(/Add/i);
+  fireEvent.change(input, { target: { value: 'test' } });
+  fireEvent.click(submitButton);
+  expect(mockAddToDoItems).toHaveBeenCalled();
+  expect(mockAddToDoItems).toHaveBeenCalledWith({
+    todo: 'test',
+    isCompleted: false
+  });
+});
+
+test('Check display value', () => {
+  const todoItems = { todo: 'test', isCompleted: false };
+  render(<TodoList todoItems={todoItems} index="item1" updateTodos={() => { }} removeToDoItem={() => { }} />);
+  const valueCheck = screen.getByDisplayValue('test');
+  expect(valueCheck).toBeInTheDocument();
 });

@@ -1,21 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import '../styles/App.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "../styles/App.css";
 
 class TodoList extends React.Component {
-  handleChange = event => {
+  handleChange = (event) => {
     const updateTodo = {
       ...this.props.todoItems,
-      [event.currentTarget.name]: event.currentTarget.value
+      [event.currentTarget.name]: event.currentTarget.value,
     };
     console.log(event.currentTarget.value);
     this.props.updateTodos(this.props.index, updateTodo);
   };
 
-  toggleCheckbox = event => {
+  toggleCheckbox = (event) => {
     const updateTodo = {
       ...this.props.todoItems,
-      [event.currentTarget.name]: event.currentTarget.checked
+      [event.currentTarget.name]: event.currentTarget.checked,
     };
     this.props.updateTodos(this.props.index, updateTodo);
   };
@@ -23,7 +23,7 @@ class TodoList extends React.Component {
   render() {
     const { todoItems } = this.props;
     return (
-      <li title="li" className={todoItems.isCompleted ? 'done' : null}>
+      <li title="li" className={todoItems.isCompleted ? "done" : null}>
         <input
           type="checkbox"
           name="isCompleted"
@@ -50,11 +50,11 @@ class TodoList extends React.Component {
 TodoList.propTypes = {
   todoItems: PropTypes.shape({
     isCompleted: PropTypes.bool,
-    todo: PropTypes.string
+    todo: PropTypes.string,
   }).isRequired,
   updateTodos: PropTypes.func.isRequired,
   removeToDoItem: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
 };
 
 export default TodoList;

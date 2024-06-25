@@ -1,16 +1,13 @@
-import React from 'react';
-import TodoForm from '../components/TodoForm';
+import React from "react";
+import TodoForm from "../components/TodoForm";
 
 export default {
-  title: 'Components/TodoForm',
+  title: "Components/TodoForm",
   component: TodoForm,
 };
 
-
-export const Default = 
-{
-args: {
-  addToDoItems: (item) => console.log('Added ToDo Item:', item),
-  
-},
+export const Default = {
+  args: {
+    addToDoItems: (item) => console.log("Added ToDo Item:", item),
+  },
 };

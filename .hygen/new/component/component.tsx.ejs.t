@@ -1,10 +1,7 @@
-# ---
-# to: <%= absPath %>/<%= component_name %>.tsx
-# ---
-# import React from 'react';
-# import styles from './style.module.css';
+---
+to: <%= absPath %>/<%= component_name %>.js
+---
+import React from 'react';
+class <%= component_name %> extends React.Component {
 
-# type Props = {};
-# export const <%= component_name %>: React.FC<Props> = (props) => {
-#   return <div className={styles.container} data-testid="test" />;
-# };
+}

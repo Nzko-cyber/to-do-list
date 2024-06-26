@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
-import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
+import TodoForm from "./hygenComponents/molecules/TodoForm/TodoForm";
+import TodoList from "./hygenComponents/molecules/TodoList/TodoList";
 class App extends Component {
   state = {
     todoItems: {}

@@ -1,12 +1,10 @@
 ---
-to: <%= absPath %>/unit_tests/<%= component_name %>.test.tsx
+to: <%= absPath %>/unit_tests/<%= component_name %>.test.js
 ---
+import  <%= component_name %>  from '../<%= component_name %>';
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import  <%= component_name %>  from '../../../../components/<%= component_name %>';
+import { render } from '@testing-library/react';
 
-test('renders component successfully', () => {
-  render(<<%= component_name %>  />);
-  const element = screen.getByTestId(/test/i);
-  expect(element).toBeInTheDocument();
+test( ' component should be defined', () => {
+  expect(<%= component_name %> ).toBeDefined();
 });

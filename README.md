@@ -86,7 +86,7 @@ A simple to-do list application built with Node.js.
    
 5. Run all Playwright tests:
     ```sh
-    npx playwright test
+    playwright test
     ```
 6. SHow Playwright test report
     ```sh

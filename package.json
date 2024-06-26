@@ -22,7 +22,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "new:component": "hygen new component",
-    "test:playwright": "playwright test"
+    "test:playwright": "playwright test",
+    "test:unit": "react-scripts test --env=jsdom --testPathPattern='\\.test\\.js$'"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",

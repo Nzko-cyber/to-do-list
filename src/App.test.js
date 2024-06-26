@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import TodoForm from './hygenComponents/molecules/TodoForm/TodoForm';
+import TodoList from './hygenComponents/molecules/TodoList/TodoList';
 
 test('Render to do', () => {
   render(<TodoForm addToDoItems={() => { }} />);
@@ -33,7 +33,7 @@ test('Calls addToDoItems on form submission', () => {
 
 test('Check display value', () => {
   const todoItems = { todo: 'test', isCompleted: false };
-  render(<TodoList todoItems={todoItems} index="item1" updateTodos={() => { }} removeToDoItem={() => { }} />);
+  render(<TodoList todoItems={todoItems} index={item1} updateTodos={() => { }} removeToDoItem={() => { }} />);
   const valueCheck = screen.getByDisplayValue('test');
   expect(valueCheck).toBeInTheDocument();
 });

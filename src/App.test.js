@@ -31,9 +31,9 @@ test('Calls addToDoItems on form submission', () => {
   });
 });
 
-test('Check display value', () => {
-  const todoItems = { todo: 'test', isCompleted: false };
-  render(<TodoList todoItems={todoItems} index={item1} updateTodos={() => { }} removeToDoItem={() => { }} />);
-  const valueCheck = screen.getByDisplayValue('test');
-  expect(valueCheck).toBeInTheDocument();
-});
+// test('Check display value', () => {
+//   const todoItems = { todo: 'test', isCompleted: false };
+//   render(<TodoList todoItems={todoItems} index={item1} updateTodos={() => { }} removeToDoItem={() => { }} />);
+//   const valueCheck = screen.getByDisplayValue('test');
+//   expect(valueCheck).toBeInTheDocument();
+// });

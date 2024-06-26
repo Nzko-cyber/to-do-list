@@ -83,6 +83,15 @@ A simple to-do list application built with Node.js.
     ```sh
     hygen new component
     ```
+   
+5. Run all Playwright tests:
+    ```sh
+    npx playwright test
+    ```
+6. SHow Playwright test report
+    ```sh
+    npx playwright test
+    ```
 
 
 

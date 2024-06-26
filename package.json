@@ -16,16 +16,18 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test:react": "react-scripts test --env=jsdom",
+    "test:app": "react-scripts test --env=jsdom src/App.test.js",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "new:component": "hygen new component"
+    "new:component": "hygen new component",
+    "test:playwright": "playwright test"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@fortawesome/fontawesome-free": "^5.2.0",
-    "@playwright/test": "^1.44.1",
+    "@playwright/test": "^1.45.0",
     "@storybook/addon-designs": "^8.0.2",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",

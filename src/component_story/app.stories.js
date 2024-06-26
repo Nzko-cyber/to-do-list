@@ -7,6 +7,12 @@ import { within, waitFor, userEvent } from "@storybook/testing-library";
 export default {
   title: "Page/App",
   component: App,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample',
+    },
+  },
   tags: ["autodocs"],
 };
 
@@ -34,10 +40,6 @@ export const Default = {
         options: {},
         // Optional flag to prevent the automatic check
         manual: true,
-      },
-      design: {
-        type: 'figma/home page',
-        url: 'https://www.figma.com/design/XVWwaVi0D8vZ4DZqPwzOmI/Storybook?node-id=151-97&t=LcXkeyJhgRxhU5ah-4',
       },
     },
   },

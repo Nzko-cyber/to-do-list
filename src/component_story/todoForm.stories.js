@@ -11,9 +11,27 @@ export const Default = {
     addToDoItems: (item) => console.log("Added ToDo Item:", item),
   },
   parameters: {
-    design: {
-      type: 'figma/to-do form',
-      url: 'https://www.figma.com/design/XVWwaVi0D8vZ4DZqPwzOmI/Storybook?node-id=151-105&t=LcXkeyJhgRxhU5ah-4',
-    },
+    // design: {
+    //   // name: "Wireframe",
+    //   type: 'figma',
+    //   url: 'https://www.figma.com/design/HflEwuvYPccr7xSFobduyh/Phoenix?node-id=17-1797&t=lGrMITCPVqmVIgUz-4',
+    // },
+
+    design: [
+      {
+        name: "Foo",
+        type: "figma",
+        url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      },
+      {
+        name: "Bar",
+        type: "link",
+        url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      },
+      {
+        type: "link",
+        url: "https://www.figma.com/file/Klm6pxIZSaJFiOMX5FpTul9F/storybook-addon-designs-sample",
+      },
+    ],
   },
 };
